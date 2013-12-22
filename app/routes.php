@@ -15,3 +15,27 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('anasayfa',array('as' => 'anasayfa', 'uses' => 'makalelerController@index'));
+
+Route::get('test', function()
+{
+    return 'Direk Return İle Route döndürüldüğünde ekrana döndürülen text\'i basar! ';
+});
+
+
+
+
+
+Route::get('users',function()
+{
+    $kullanicilar = user::all();
+
+    return View::make('users')->with('kullanicilar',$kullanicilar);
+
+});
+
+Route::get('makaleler', array('as' => 'makaleler', 'uses' => 'makalelerController@index'));
+
+
+Route::get('makaleler/makale-ekle', array('as' => 'makale-ekle', 'uses' => 'makalelerController@create'));
