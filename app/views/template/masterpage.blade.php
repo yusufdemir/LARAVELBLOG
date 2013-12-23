@@ -29,6 +29,11 @@
             <hr color="red"/>
         </div>
         <div class="col-xs-12 contents">
+            @include('sidebar')
+            <div class="clearfix"></div>
+        </div>
+        <hr/>
+        <div class="col-xs-12 contents">
             @yield('content')
             <div class="clearfix"></div>
         </div>

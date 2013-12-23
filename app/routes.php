@@ -16,6 +16,7 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+
 /*Tümünü Daha Sonra İngilizceye çevir*/
 //Anasayfa
 Route::get('anasayfa',array('as' => 'anasayfa', 'uses' => 'makalelerController@index'));

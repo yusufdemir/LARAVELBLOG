@@ -78,3 +78,8 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+
+View::composer('sidebar', function($view) {
+    $view->with('links', ['hello','world!']);
+});
