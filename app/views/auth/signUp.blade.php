@@ -1,6 +1,6 @@
 @extends('template/masterpage')
 @section('content')
 
-<h1>Makale Ekle</h1>
+<h1>Üyelik Formu</h1>
 
 @stop

@@ -2,7 +2,28 @@
 .container{
     max-width: none !important;
     width: 970px;
+    padding: 0px;
 }
+/*contents*/
+.contents{
+    background-color: #DDD;
+    padding: 10;
+    margin: 0;
+}
+/*contents END*/
+
+/*users Panel*/
+.panel {
+    margin-bottom: 20px;
+    background-color: #FFF;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin: 0 5px 0 5px;
+    padding: 0;
+}
+/*users panel END*/
 
 /*follower*/
 

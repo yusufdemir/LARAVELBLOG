@@ -16,26 +16,21 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+/*Tümünü Daha Sonra İngilizceye çevir*/
+//Anasayfa
 Route::get('anasayfa',array('as' => 'anasayfa', 'uses' => 'makalelerController@index'));
 
-Route::get('test', function()
-{
-    return 'Direk Return İle Route döndürüldüğünde ekrana döndürülen text\'i basar! ';
-});
+// Üye ol userscontrollers@singUpForm fonksiyonu ile üyelik formunun olduğu sayfa basılır...
+Route::get('uye-ol', array('as' => 'uye-ol', 'uses' => 'usersController@signUpForm'));
 
+//giriş yap
+Route::get('giris-yap', array('as' => 'giris-yap', 'uses' => 'usersController@signInForm'));
 
+//Kullanıcıları Getirir
+Route::get('kullanicilar', array('as' => 'kullanicilar', 'uses' => 'usersController@index'));
 
-
-
-Route::get('users',function()
-{
-    $kullanicilar = user::all();
-
-    return View::make('users')->with('kullanicilar',$kullanicilar);
-
-});
-
+//makaleleri getirir
 Route::get('makaleler', array('as' => 'makaleler', 'uses' => 'makalelerController@index'));
 
-
+//makale ekleme formunu basar
 Route::get('makaleler/makale-ekle', array('as' => 'makale-ekle', 'uses' => 'makalelerController@create'));

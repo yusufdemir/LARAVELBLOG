@@ -16,13 +16,21 @@
 </head>
 <body>
     <div class="container">
-        <div class="col-xs-12" style="background-color: red;">
-            <h1>Laravel Master Page</h1>
+        <div class="col-xs-12" style="background-color: #DDD;">
+            <h1>Laravel Master Page </h1>
+            {{ HTML::link(URL::route('anasayfa'), 'Anasayfa') }}  ||
+            {{ HTML::link(URL::route('makaleler'), 'Makaleleler') }}-
+            {{ HTML::link(URL::route('makale-ekle'), 'Makale Ekle') }} ||
+            {{ HTML::link(URL::route('kullanicilar'), 'Kullanıcılar') }} -
+            {{ HTML::link(URL::route('uye-ol'), 'Üye Ol') }} -
+            {{ HTML::link(URL::route('giris-yap'), 'Giriş Yap') }}
+
             <p>bu satırdan sonrası dinamiktir</p>
             <hr color="red"/>
         </div>
-        <div class="col-xs-12">
+        <div class="col-xs-12 contents">
             @yield('content')
+            <div class="clearfix"></div>
         </div>
 
     </div>

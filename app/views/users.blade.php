@@ -3,7 +3,7 @@
 
 
     @foreach($kullanicilar as $kullanici)
-        <section class="panel col-xs-5">
+        <section class="panel col-xs-4">
             <div class="follower">
                 <div class="panel-body">
                     <h3>{{$kullanici->username}}</h3>
