@@ -1,4 +1,4 @@
-@extends('template/masterpage')
+@extends('template/singlemasterpage')
 @section('content')
 
 <h1>Makale Ekle</h1>
