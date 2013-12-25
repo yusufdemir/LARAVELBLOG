@@ -13,11 +13,13 @@ class DatabaseSeeder extends Seeder {
 
 		// $this->call('UserTableSeeder');
 		$this->call('defaultUsers');
-		$this->command->info('Standart uyeler Olu�turuldu !');
+		$this->command->info('Standart uyeler Olusturuldu !');
 		
 		$this->call('defaultsArticles');
-		$this->command->info('Giri� Makaleleri Olu�turuldu !');
-		
+		$this->command->info('Giris Makaleleri Olusturuldu !');
+
+        $this->call('defaultimages');
+        $this->command->info('Test Resimleri Olusturuldu !');
 	}
 
 }
@@ -61,8 +63,8 @@ class defaultsArticles extends Seeder{
 		// tabloya girilecek veriler
 		DB::table('articles')->insert(
 			array(
-				'head'=>'Test Blo�una Ho�geldiniz',
-				'text'=>'Bu site Laravel 4.1 kullan�larak Yusuf Demir taraf�ndan yaz�lm��t�r. ileti�im : 4yusufdemir@gmail',
+				'head'=>'Test Bloğuna Hoşgeldiniz',
+				'text'=>'Bu site Laravel 4.1 kullanalarak Yusuf Demir tarafından yazılmıştır. iletişim : 4yusufdemir@gmail',
 				'tags'=>'laravel,yusuf demir,4spannen,2013,framework',
 				'user_id'=>1,
 				'created_at'=>date('Y-m-d H:i:s')
@@ -71,4 +73,30 @@ class defaultsArticles extends Seeder{
 	
 	}
 
+}
+
+class defaultimages extends  Seeder{
+
+    public function run(){
+        DB::table('images')->delete();
+        DB::table('images')->insert(array(
+            array(
+                'head'=>'Test Resim 1',
+                'text'=>'Resim Açıklaması',
+                'tags'=>'laravel,yusuf demir,4spannen,2013,framework',
+                'src'=>'http://nexthon.com/vmp/uploads/54229abfcfa5649e7003b83dd4755294.jpg',
+                'user_id'=>1,
+                'created_at'=>date('Y-m-d H:i:s')
+            ),
+            array(
+                'head'=>'Test Resim 2',
+                'text'=>'Resim Açıklaması 2',
+                'tags'=>'laravel,yusuf demir,4spannen,2013,framework',
+                'src'=>'http://nexthon.com/vmp/uploads/92cc227532d17e56e07902b254dfad10.jpg',
+                'user_id'=>1,
+                'created_at'=>date('Y-m-d H:i:s')
+            )
+            )
+        );
+    }
 }

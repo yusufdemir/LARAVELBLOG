@@ -45,6 +45,7 @@ a:active {
     position: relative;
     padding: 0;
     clear: both;
+    min-height: 300px;
 }
 #status-bar-wrap a#status-bar {
     color: #FFF;
@@ -394,6 +395,7 @@ to {
 }
 #side-bar-signup {
     display: block;
+    margin-top: 40px;
 }
 #footer {
     width: 1060px;
@@ -417,7 +419,7 @@ to {
     width: 740px;
 }
 #main {
-    margin: 30px 0 22px;
+    margin: 15px 0 22px;
     width: 740px;
     float: left;
 }
@@ -836,7 +838,8 @@ span.original-badge {
     border-radius: 20px;
     padding: 0 6px;
     text-shadow: 0 1px rgba(0, 0, 0, .2);
-    box-shadow: margin-left:5px;
+
+    margin-left:5px;
 }
 .main-filter a.safe-mode-switcher {
     display: block;
@@ -889,6 +892,7 @@ span.original-badge {
     -moz-border-radius: 0 0 5px 5px;
     overflow: hidden;
     padding-top: 20px;
+    margin-bottom: 10px;
 }
 #content.static {
     padding: 0 20px;
@@ -923,7 +927,6 @@ span.original-badge {
 }
 #entries-content {
     overflow: hidden;
-    padding: 0 20px 20px;
 }
 #entries-content ul li a, #entries-content ul li img {
     display: block;
@@ -949,7 +952,7 @@ span.original-badge {
     box-shadow: 0 1px #fff;
     -moz-box-shadow: 0 1px #fff;
     -webkit-box-shadow: 0 1px #fff;
-    width: 230px;
+    width: 22s0px;
     overflow: hidden;
 }
 
@@ -989,7 +992,7 @@ span.original-badge {
     text-align: center;
 }
 #entries-content.grid ul, #entries-content.collage ul {
-    margin-bottom: -30px;
+    margin-bottom: 10px;
     padding: 0;
     list-style-type: none;
     float: left;
@@ -1005,6 +1008,7 @@ span.original-badge {
 
     width: 220px;
     height: 150px;
+    margin-left: 20px;
 }
 #entries-content.grid ul li h1 {
     font-weight: normal;
@@ -3878,7 +3882,7 @@ form.page .wrap a.facebook:active {
     background-color: #2d4372;
 }
 form.page .wrap a.twitter.disconnected {
-    background-color: #31C5F6 url(../images/sprite_v12.png) 0 -1300px no-repeat;
+    background: #31C5F6 url(../images/sprite_v12.png) 0 -1300px no-repeat;
 }
 form.page .wrap a.twitter.disconnected:hover {
     background-color: #62d3f8;

@@ -21,6 +21,9 @@ Route::get('/', function()
 //Anasayfa
 Route::get('anasayfa',array('as' => 'anasayfa', 'uses' => 'makalelerController@index'));
 
+//images
+Route::get('images',array('as' => 'images', 'uses' => 'kattmatthomeController@index'));
+
 // Üye ol userscontrollers@singUpForm fonksiyonu ile üyelik formunun olduğu sayfa basılır...
 Route::get('uye-ol', array('as' => 'uye-ol', 'uses' => 'usersController@signUpForm'));
 
